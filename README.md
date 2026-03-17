@@ -24,13 +24,12 @@
 ## ⚙️ Installation & Usage
 
 1.  **Clone the Repository**:
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/nurfocus-pro.git](https://github.com/YOUR_USERNAME/nurfocus-pro.git)
-    ```
-2.  **Open the App**:
+   Copy the code in your code editor and make separte files with .html, .css, .js extensions and copy code in their respective files.
+
+3.  **Open the App**:
     Just open the `index.html` file in any modern browser.
 
-3.  **How to use**:
+4.  **How to use**:
     * Add a mission and select its priority.
     * Click **🎯 Focus Mission** on a card to load it into the timer.
     * Hit the **⚙️ Gear Icon** in the header if you want to change the theme.
