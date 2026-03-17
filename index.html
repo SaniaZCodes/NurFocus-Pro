@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NurFocus Pro | Command Center</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app-wrapper">
+            <header>
+                <div class="logo-area">
+                    <h1>NurFocus <span>Pro</span></h1>
+                    <p id="digital-clock">00:00:00 AM</p>
+                </div>
+                
+                <div class="header-right">
+                    <div class="stats-bar">
+                        <div class="stat-card">Total <span id="stat-total">0</span></div>
+                        <div class="stat-card">Pending <span id="stat-pending">0</span></div>
+                        <div class="stat-card">Completed <span id="stat-completed">0</span></div>
+                    </div>
+                    <button id="theme-toggle-btn" title="Switch Vibe">⚙️</button>
+                </div>
+            </header>
+
+            <section id="timer-box">
+                <p id="focus-status">READY TO WORK</p>
+                <div class="timer-controls">
+                    <button class="arrow-btn" id="time-down" title="Decrease 5m">-</button>
+                    <h2 id="countdown">25:00</h2>
+                    <button class="arrow-btn" id="time-up" title="Increase 5m">+</button>
+                </div>
+                <p id="active-task-display">Select a mission to begin</p>
+                <div class="main-btns">
+                    <button id="start-btn">Start Focus</button>
+                    <button id="pause-btn">Pause</button>
+                    <button id="reset-btn">Reset</button>
+                </div>
+            </section>
+
+            <section id="input-area">
+                <form id="task-form">
+                    <input type="text" id="task-input" placeholder="What needs to be done?" required>
+                    <select id="priority-input">
+                        <option value="high">High</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <button type="submit" id="add-mission-btn">Add Mission</button>
+                </form>
+            </section>
+
+            <main id="kanban-board">
+                <div class="column" id="high-col">
+                    <h3>🔴 High Priority</h3>
+                    <div class="list" id="high-list"></div>
+                </div>
+                <div class="column" id="med-col">
+                    <h3>🔵 Medium Priority</h3>
+                    <div class="list" id="medium-list"></div>
+                </div>
+                <div class="column" id="low-col">
+                    <h3>🟢 Low Priority</h3>
+                    <div class="list" id="low-list"></div>
+                </div>
+            </main>
+
+            <section id="history-section">
+                <h3>🏁 Completed Missions</h3>
+                <div id="completed-list"></div>
+            </section>
+
+            <div id="verify-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>Mission Time Up!</h2>
+                    <p>Is the task completed successfully?</p>
+                    <div class="modal-btns">
+                        <button id="btn-yes">YES</button>
+                        <button id="btn-no">NO</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="victory-overlay" class="modal hidden">
+                <div class="modal-content">
+                    <h1>🎉 Mubarak!</h1>
+                    <p>You conquered that mission.</p>
+                    <button id="close-victory-btn">Back to Work</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
